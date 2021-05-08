@@ -31,24 +31,10 @@ remotes::install_github("javiereliomedina/safecastR")
 
 ## Usage
 
-```{r lbr, message = FALSE}
+```{r exanple, message = FALSE}
 
-  library(safecastR) 
-
-```
-
-Example, 
-
-```{r get_data}
-
+library(safecastR) 
 dat <- get_measurements(100, 34.5, 135.5)
-
-```
-
-`sf` object 
-
-```{r plot}
-
 dat
 
 ```

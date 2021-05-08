@@ -16,18 +16,8 @@ remotes::install_github("javiereliomedina/safecastR")
 ## Usage
 
 ``` r
-  library(safecastR) 
-```
-
-Example,
-
-``` r
+library(safecastR) 
 dat <- get_measurements(100, 34.5, 135.5)
-```
-
-`sf` object
-
-``` r
 dat
 #> Simple feature collection with 19 features and 14 fields
 #> Geometry type: POINT
