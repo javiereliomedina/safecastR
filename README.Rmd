@@ -1,0 +1,56 @@
+---
+output:
+  github_document:
+    html_preview: false
+always_allow_html: true
+---
+
+```{r, echo = FALSE}
+
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-"
+)
+
+```
+
+# safecastR
+
+## Overview
+
+*safecastR* package provides functions for interacting with the [Safecast API](https://api.safecast.org/).
+
+## Installation
+
+```{r, eval = FALSE}
+
+if (!require("remotes")) install.packages("remotes")
+remotes::install_github("javiereliomedina/safecastR")
+
+```
+
+## Usage
+
+```{r lbr, message = FALSE}
+
+  library(safecastR) 
+
+```
+
+Example, 
+
+```{r get_data}
+
+data <- get_measurements(100, 34.5, 135.5)
+
+```
+
+`sf` object 
+
+```{r plot}
+
+mapview::mapview(data)
+
+```
+
