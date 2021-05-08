@@ -2,7 +2,6 @@
 output:
   github_document:
     html_preview: false
-always_allow_html: true
 ---
 
 ```{r, echo = FALSE}
@@ -42,7 +41,7 @@ Example,
 
 ```{r get_data}
 
-data <- get_measurements(100, 34.5, 135.5)
+dat <- get_measurements(100, 34.5, 135.5)
 
 ```
 
@@ -50,7 +49,7 @@ data <- get_measurements(100, 34.5, 135.5)
 
 ```{r plot}
 
-mapview::mapview(data)
+dat
 
 ```
 
