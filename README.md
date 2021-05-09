@@ -17,45 +17,47 @@ remotes::install_github("javiereliomedina/safecastR")
 
 ``` r
 library(safecastR) 
-dat <- get_measurements(100, 34.5, 135.5)
+dat <- get_measurements(dist = 100,
+                        lat  = 52.520, 
+                        long = 13.405)
 dat
-#> Simple feature collection with 38 features and 14 fields
+#> Simple feature collection with 180 features and 14 fields
 #> Geometry type: POINT
 #> Dimension:     XY
-#> Bounding box:  xmin: 135.4989 ymin: 34.49936 xmax: 135.501 ymax: 34.50055
+#> Bounding box:  xmin: 13.40359 ymin: 52.51942 xmax: 13.40591 ymax: 52.52077
 #> CRS:           NA
 #> First 10 features:
-#>          id user_id value unit location_name device_id original_id
-#> 1  44593235     161    32  cpm            NA        NA          NA
-#> 2  44593236     161    32  cpm            NA        NA          NA
-#> 3  44593240     161    25  cpm            NA        NA          NA
-#> 4  44593097     161    29  cpm            NA        NA          NA
-#> 5  44593098     161    32  cpm            NA        NA          NA
-#> 6  44593099     161    33  cpm            NA        NA          NA
-#> 7  44593140     161    44  cpm            NA        NA          NA
-#> 8  44593234     161    32  cpm            NA        NA          NA
-#> 9  44593142     161    39  cpm            NA        NA          NA
-#> 10 44593238     161    28  cpm            NA        NA          NA
+#>           id user_id value unit location_name device_id original_id
+#> 1  147193708     671    21  cpm            NA        NA          NA
+#> 2  147193709     671    21  cpm            NA        NA          NA
+#> 3  147193715     671    21  cpm            NA        NA          NA
+#> 4  147193717     671    24  cpm            NA        NA          NA
+#> 5  147193725     671    26  cpm            NA        NA          NA
+#> 6  147193726     671    28  cpm            NA        NA          NA
+#> 7  147198462     983    47  cpm            NA        NA          NA
+#> 8  147198466     983    49  cpm            NA        NA          NA
+#> 9  147198472     983    47  cpm            NA        NA          NA
+#> 10  50717453     712    40  cpm            NA        NA          NA
 #>    measurement_import_id              captured_at height devicetype_id
-#> 1                  18114 2015-03-19T22:40:14.000Z     NA            NA
-#> 2                  18114 2015-03-19T22:40:19.000Z     NA            NA
-#> 3                  18114 2015-03-19T22:40:39.000Z     NA            NA
-#> 4                  18114 2015-03-19T22:28:37.000Z     NA            NA
-#> 5                  18114 2015-03-19T22:28:42.000Z     NA            NA
-#> 6                  18114 2015-03-19T22:28:48.000Z     NA            NA
-#> 7                  18114 2015-03-19T22:32:15.000Z     NA            NA
-#> 8                  18114 2015-03-19T22:40:09.000Z     NA            NA
-#> 9                  18114 2015-03-19T22:32:25.000Z     NA            NA
-#> 10                 18114 2015-03-19T22:40:29.000Z     NA            NA
+#> 1                  43820 2018-12-13T22:12:32.000Z     NA            NA
+#> 2                  43820 2018-12-13T22:12:27.000Z     NA            NA
+#> 3                  43820 2018-12-13T22:11:57.000Z     NA            NA
+#> 4                  43820 2018-12-13T22:11:47.000Z     NA            NA
+#> 5                  43820 2018-12-13T22:11:07.000Z     NA            NA
+#> 6                  43820 2018-12-13T22:11:02.000Z     NA            NA
+#> 7                  43823 2019-08-19T11:24:30.000Z     NA            NA
+#> 8                  43823 2019-08-19T11:24:10.000Z     NA            NA
+#> 9                  43823 2019-08-19T11:23:40.000Z     NA            NA
+#> 10                 19762 2015-07-30T16:54:07.000Z     NA            NA
 #>    sensor_id station_id channel_id                  geometry
-#> 1         NA         NA         NA POINT (135.4998 34.49999)
-#> 2         NA         NA         NA POINT (135.4999 34.49994)
-#> 3         NA         NA         NA  POINT (135.4992 34.4994)
-#> 4         NA         NA         NA  POINT (135.499 34.49991)
-#> 5         NA         NA         NA POINT (135.4992 34.50019)
-#> 6         NA         NA         NA POINT (135.4993 34.50034)
-#> 7         NA         NA         NA POINT (135.4996 34.50045)
-#> 8         NA         NA         NA POINT (135.4996 34.50011)
-#> 9         NA         NA         NA POINT (135.5005 34.49991)
-#> 10        NA         NA         NA POINT (135.4996 34.49955)
+#> 1         NA         NA         NA POINT (13.40566 52.52036)
+#> 2         NA         NA         NA  POINT (13.40549 52.5203)
+#> 3         NA         NA         NA POINT (13.40549 52.52026)
+#> 4         NA         NA         NA POINT (13.40496 52.51993)
+#> 5         NA         NA         NA POINT (13.40419 52.51956)
+#> 6         NA         NA         NA POINT (13.40393 52.51942)
+#> 7         NA         NA         NA  POINT (13.40505 52.5201)
+#> 8         NA         NA         NA POINT (13.40522 52.51995)
+#> 9         NA         NA         NA  POINT (13.4052 52.51992)
+#> 10        NA         NA         NA  POINT (13.4045 52.51994)
 ```

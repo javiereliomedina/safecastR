@@ -34,7 +34,9 @@ remotes::install_github("javiereliomedina/safecastR")
 ```{r exanple, message = FALSE}
 
 library(safecastR) 
-dat <- get_measurements(100, 34.5, 135.5)
+dat <- get_measurements(dist = 100,
+                        lat  = 52.520, 
+                        long = 13.405)
 dat
 
 ```
