@@ -19,11 +19,11 @@ remotes::install_github("javiereliomedina/safecastR")
 library(safecastR) 
 dat <- get_measurements(100, 34.5, 135.5)
 dat
-#> Simple feature collection with 19 features and 14 fields
+#> Simple feature collection with 38 features and 14 fields
 #> Geometry type: POINT
 #> Dimension:     XY
 #> Bounding box:  xmin: 135.4989 ymin: 34.49936 xmax: 135.501 ymax: 34.50055
-#> Geodetic CRS:  WGS 84
+#> CRS:           NA
 #> First 10 features:
 #>          id user_id value unit location_name device_id original_id
 #> 1  44593235     161    32  cpm            NA        NA          NA
