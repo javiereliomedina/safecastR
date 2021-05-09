@@ -21,8 +21,9 @@ get_measurements <- function(dist,
                              ini_date = NULL,
                              end_date = NULL){
 
-  # URLs
+  # URL
   res <- httr::GET("https://api.safecast.org/measurements.json",
+                   ua,
                    query = list(distance = dist,
                                 latitude = lat,
                                 longitude = long,
@@ -30,13 +31,19 @@ get_measurements <- function(dist,
                                 captured_before=as.POSIXct(end_date)
                    ))
 
+  if (httr::http_type(res) != "application/json") {
+
+    stop("API did not return json", call. = FALSE)
+
+  }
+
   # Loop for getting all pages
   i <- 0
   pages <- list()
   repeat {
-    mydata <- jsonlite::fromJSON(paste0(res$url, "&page=", i))
+    parsed <- jsonlite::fromJSON(paste0(res$url, "&page=", i))
     message("Retrieving page ", i)
-    pages[[i+1]] <- mydata
+    pages[[i+1]] <- parsed
     i = i+1
     if (is.numeric(nrow(jsonlite::fromJSON(paste0(res$url, "&page=", i)))) == FALSE){
       break
