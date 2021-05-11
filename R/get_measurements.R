@@ -45,16 +45,15 @@ get_measurements <- function(dist,
     message("Retrieving page ", i)
     pages[[i+1]] <- parsed
     i = i+1
-    if (is.numeric(nrow(jsonlite::fromJSON(paste0(res$url, "&page=", i)))) == FALSE){
+    if (is.null(nrow(parsed)) == TRUE){
       break
     }
   }
 
   # Combine all into one
-  data <- jsonlite::rbind_pages(pages)
+  data <- jsonlite::rbind_pages(purrr::compact(pages))
 
   # Convert to sf object
   sf::st_as_sf(data, coords = c("longitude", "latitude"))
 
 }
-
