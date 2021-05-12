@@ -25,7 +25,7 @@ dat
 #> Geometry type: POINT
 #> Dimension:     XY
 #> Bounding box:  xmin: 13.40359 ymin: 52.51942 xmax: 13.40591 ymax: 52.52077
-#> CRS:           NA
+#> Geodetic CRS:  WGS 84
 #> First 10 features:
 #>           id user_id value unit location_name device_id original_id
 #> 1  147193708     671    21  cpm            NA        NA          NA
@@ -61,3 +61,13 @@ dat
 #> 9         NA         NA         NA  POINT (13.4052 52.51992)
 #> 10        NA         NA         NA  POINT (13.4045 52.51994)
 ```
+
+``` r
+library(ggplot2)
+ggplot() +
+  geom_sf(data = dat, aes(colour = value)) +
+  scale_colour_viridis_c() +
+  theme_bw()
+```
+
+![](man/figures/README-plot-1.png)<!-- -->

@@ -31,13 +31,23 @@ remotes::install_github("javiereliomedina/safecastR")
 
 ## Usage
 
-```{r exanple, message = FALSE}
+```{r data, message = FALSE}
 
 library(safecastR) 
 dat <- get_measurements(dist = 100,
                         lat  = 52.520, 
                         long = 13.405)
 dat
+
+```
+
+```{r plot}
+
+library(ggplot2)
+ggplot() +
+  geom_sf(data = dat, aes(colour = value)) +
+  scale_colour_viridis_c() +
+  theme_bw()
 
 ```
 
