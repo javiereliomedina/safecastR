@@ -54,6 +54,6 @@ get_measurements <- function(dist,
   data <- jsonlite::rbind_pages(purrr::compact(pages))
 
   # Convert to sf object
-  sf::st_as_sf(data, coords = c("longitude", "latitude"))
+  sf::st_as_sf(data, coords = c("longitude", "latitude"), crs = "EPSG:4326")
 
 }
